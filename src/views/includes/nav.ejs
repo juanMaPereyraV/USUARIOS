@@ -1,0 +1,26 @@
+<nav>
+    <a href="/"><i class="fas fa-home"></i></a>
+
+    <% if (!user) { %>
+        <a href="/users/login">Login</a>
+        <a href="/users/register">Register</a>
+        
+        <% } else if (user && user.isAdmin) { %>
+            
+            <a href="/users/">All Users</a>
+            <form action="/users/logout" method="post">
+                <button type="submit">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </form>
+            
+            <% } else { %>
+
+            <a href="/users/profile">Profile</a>
+            <form action="/users/logout" method="post">
+                <button type="submit">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </form>
+        <% } %> 
+</nav>

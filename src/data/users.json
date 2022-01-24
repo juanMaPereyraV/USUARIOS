@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "email": "lopezjuandiego@gmail.com",
+    "password": "$2b$10$vNx94vDs7vsyXuPO/aPzCOhhabmOpSgngQxhn4PY3.1jHUnd0VlR6",
+    "isAdmin": false,
+    "isActive": true
+  }
+
+]

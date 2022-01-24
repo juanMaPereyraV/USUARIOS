@@ -1,0 +1,28 @@
+<%- include ("../includes/head")  %> 
+<body>
+    <%- include ("../includes/nav")  %> 
+<h1>Login</h1>
+<form action="/users/acces" method="post">
+    <label for="email">
+        <i class="fas fa-user"></i>
+        <input type="email" name="email" id="email">
+    </label>
+    <label for="password"><i class="fas fa-key"></i>
+        <input type="password" name="password" id="password">
+    </label>
+    <label for="remember">Recordar<input type="checkbox" name="remember" id="remember"></label>
+    <button type="submit">Acces</button>
+
+
+</form>
+
+<% if (locals.errors && errors.email) { %>
+    <p><%= errors.email.msg %> </p>
+   <% } %>
+   
+   <% if (locals.errors && errors.password) { %>
+       <p><%= errors.password.msg %> </p>
+      <% } %>
+      
+</body>
+</html>

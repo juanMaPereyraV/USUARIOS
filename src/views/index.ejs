@@ -1,0 +1,12 @@
+<%- include ("./includes/head")  %> 
+<body>
+    <%- include ("./includes/nav")  %> 
+
+    <h1>Hola, Todo sencillo maestro
+    <% if (user) { %>
+        <h1>User: <%= user.email %> </h1>
+     <% } else { %>
+        <h1>Ingresa para ver los datos</h1>
+    <% } %>
+</body>
+</html>
