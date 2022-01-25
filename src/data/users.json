@@ -5,6 +5,19 @@
     "password": "$2b$10$vNx94vDs7vsyXuPO/aPzCOhhabmOpSgngQxhn4PY3.1jHUnd0VlR6",
     "isAdmin": false,
     "isActive": true
+  },
+  {
+    "id": 1,
+    "email": "fernando@gmail.com",
+    "password": "$2b$10$yydE/nDT3cYEOOUHbwo3ROT/6YDIZ8fb2MV4r3s8xufj5FotYdJoa",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 1,
+    "email": "fernando@digitalhouse.com",
+    "password": "$2b$10$6w2qKwt/ELw2ZKXLriqPPuulfPaGwi0FeOGFlZCYQHKGuXinjoIRK",
+    "isAdmin": true,
+    "isActive": true
   }
-
 ]

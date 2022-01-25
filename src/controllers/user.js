@@ -4,9 +4,7 @@ const cookie = require('cookie-parser')
 const bcrypt = require('bcrypt');
 
 module.exports = {
-  Iindex: (req, res) => res.send (user.all(),{
-    title: "Index"
-  }),
+ 
   login: (req, res) => res.render("users/login", {
     title: "Home",
     
@@ -17,11 +15,11 @@ module.exports = {
   profile: (req, res) => res.render("users/profile",  {
     title: "Profile"}),
 
-  acces: (req, res) => {
+  access: (req, res) => {
     let errors = validator.validationResult(req); //trae los errores del resultado de las validciones
 
     if (!errors.isEmpty()) {
-      return res.render("user/login", {
+      return res.render("users/login", {
         errors: errors.mapped() 
       });
     }
@@ -29,7 +27,7 @@ module.exports = {
 
     let exist = user.search("email", req.body.email);
     if (!exist) {
-      return res.render("user/login", {
+      return res.render("users/login", {
         errors: {
           email: {
             msg: "email sin registrar",
@@ -39,7 +37,7 @@ module.exports = {
     }
 
     if (!bcrypt.compareSync(req.body.password, exist.password)){ 
-      return res.render("user/login", {
+      return res.render("users/login", {
         errors: {
           password: {
             msg: "Contraseña invalida",
@@ -59,7 +57,7 @@ module.exports = {
     let errors = validator.validationResult(req); //trae los errores del resultado de las validciones
 
     if (!errors.isEmpty()) {
-      return res.render("user/register", {
+      return res.render("users/register", {
         errors: errors.mapped() 
       })
     }
@@ -67,7 +65,7 @@ module.exports = {
     let exist = user.search("email", req.body.email);
 
     if (exist) {
-      return res.render("user/register", {
+      return res.render("users/register", {
         errors: {
           email: {
             msg: "email ya registrado",
